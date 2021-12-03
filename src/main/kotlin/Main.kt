@@ -48,13 +48,12 @@ class Punto(identifier:String){
 
 fun main() {
 
-    //(RA2.b,d,h). Creo dos puntos y el tercero es el resultado de aplicarle el método
+    //(RA2.b,d,h). Creo dos puntos e imprimo el componenteDeVector de estos dos
     val a = Punto("66",3,2)
     val b = Punto ("68",1,3)
-    val c = Punto.componenteDeVector(a,b)
 
     println("")
-    println(c)
+    println(Punto.componenteDeVector(a,b))
     println("")
 
     //RA6.a,c. Creo varios puntos y los meto en un array para usarlos con el método
@@ -64,7 +63,6 @@ fun main() {
     val punto4 = Punto("Punto 4",82,21)
     val punto5 = Punto("Punto 5",65,-7)
 
-
     val arrayPuntos = arrayOf<Punto>(punto1,punto2,punto3,punto4,punto5)
     println("Lista de puntos: ")
     for (i in 0..4) {print(arrayPuntos[i], )}
@@ -73,5 +71,4 @@ fun main() {
 
     println("Localización Geográfica NS: ")
     println(Punto.localizacionGeograficaNS(arrayPuntos))
-
 }
